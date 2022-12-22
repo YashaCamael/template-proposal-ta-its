@@ -4,25 +4,45 @@
 
 \subsection{Metode yang digunakan}
 
-\lipsum[11]
-
-% Contoh input gambar dengan format *.jpg
-\begin{figure} [ht] \centering
-  % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.45]{gambar/blueprint.jpg}
-  % Keterangan gambar yang diinputkan
-  \caption{\emph{Blueprint} roket yang akan diuji coba \parencite{SpaceXBlueprint}}
-  % Label referensi dari gambar yang diinputkan
-  \label{fig:Blueprint}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"gambar/Flowchart penelitian.drawio"}
+	\caption{Flowchart Penelitian}
+	\label{fig:flowchart-penelitian}
 \end{figure}
 
-% Contoh penggunaan referensi dari gambar yang diinputkan
-Pada \emph{blueprint} yang tertera di Gambar \ref{fig:Blueprint}. \lipsum[12]
+Pada Tugas Akhir ini, garis besar alur Tugas Akhir dapat dilihat pada Gambar \ref*{fig:flowchart-penelitian}.
+Skema sistem yang akan digunakan pada rencana Tugas Akhir ini ditunjukkan pada Gambar \ref*{fig:blok-diagram-anemometer-ultrasonic}. 
+Pengujian performansi alat ini menggunakan metode pengujian manipulasi kecepatan angin kemudian dilakukan perbandingan 
+antara sensor Ultrasonic pada Anemometer Ultrasonic dalam Ruangan Berbasis Raspberry Pi Pico dengan anemometer Hot-wire komersial yang
+ memiliki pengukuran kecepatan angin paling kecil mencapai 0,1 m/s.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"gambar/Blok diagram anemometer ultrasonic"}
+	\caption{Blok Diagram Sistem}
+	\label{fig:blok-diagram-anemometer-ultrasonic}
+\end{figure}
+
+Adapun diagram blok sistem pengukuran kecepatan angin pada alat ini adalah sebagai berikut:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"gambar/Diagram blok pengukuran kecepatan angin.drawio"}
+	\caption{Blok Diagram Perhitungan Kecepatan Angin}
+	\label{fig:diagram-blok-pengukuran-kecepatan-angin}
+\end{figure}
+
 
 \subsection{Bahan dan peralatan yang digunakan}
 
-\lipsum[13]
-\lipsum[3]
+Untuk Alat dan bahan yang diperlukan dalam Tuagas Akhir ini adalah sebagai berikut:
+\begin{enumerate}
+  \item Raspberry Pi Pico W
+  \item Sensor Ultrasonic US-100
+  \item Sensor Suhu
+  \item Anemometer Hot-Wire sebagai alat validasi pengukuran
+\end{enumerate}
 
 \subsection{Urutan pelaksanaan penelitian}
 
@@ -39,16 +59,16 @@ Pada \emph{blueprint} yang tertera di Gambar \ref{fig:Blueprint}. \lipsum[12]
     \hline
 
     % Gunakan \G untuk mengisi sel dan \w untuk mengosongkan sel
-    Pengambilan data &
-    \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    Perancangan Sistem &
+    \G & \G & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
     Pengolahan data &
-    \w & \w & \w & \w & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w \\
+    \w & \w & \w & \w & \w & \w & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
     Analisa data &
-    \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \G & \w & \w & \w & \w \\
+    \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \w & \w & \w & \w \\
     \hline
 
     Evaluasi penelitian &
@@ -60,4 +80,3 @@ Pada \emph{blueprint} yang tertera di Gambar \ref{fig:Blueprint}. \lipsum[12]
   \label{tbl:timeline}
 \end{table}
 
-Pada \emph{timeline} yang tertera di Tabel \ref{tbl:timeline} \lipsum[10]
