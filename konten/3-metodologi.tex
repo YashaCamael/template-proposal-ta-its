@@ -6,25 +6,43 @@
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{"gambar/Flowchart penelitian.drawio"}
+	\includegraphics[width=0.4\linewidth]{"gambar/Flowchart penelitian.drawio"}
 	\caption{Flowchart Penelitian}
 	\label{fig:flowchart-penelitian}
 \end{figure}
 
-Pada Tugas Akhir ini, garis besar alur Tugas Akhir dapat dilihat pada Gambar \ref*{fig:flowchart-penelitian}.
-Skema sistem yang akan digunakan pada rencana Tugas Akhir ini ditunjukkan pada Gambar \ref*{fig:blok-diagram-anemometer-ultrasonic}. 
-Pengujian performansi alat ini menggunakan metode pengujian manipulasi kecepatan angin kemudian dilakukan perbandingan 
-antara sensor Ultrasonic pada Anemometer Ultrasonic dalam Ruangan Berbasis Raspberry Pi Pico dengan anemometer Hot-wire komersial yang
- memiliki pengukuran kecepatan angin paling kecil mencapai 0,1 m/s.
+Pada Tugas Akhir ini, garis besar alur Tugas Akhir dapat dilihat pada Gambar \ref*{fig:flowchart-penelitian}. Berikut penjelasan
+dari tiap tahapan pada Gambar \ref{fig:flowchart-penelitian}.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"gambar/Blok diagram anemometer ultrasonic"}
-	\caption{Blok Diagram Sistem}
-	\label{fig:blok-diagram-anemometer-ultrasonic}
-\end{figure}
+\begin{enumerate}
+  \item Studi Literatur
+  
+  Studi literatur adalah metode awal yang dilakukan guna mencari materi-materi penunjang dari pengembangan anemometer ultrasonic 
+  dalam ruangan berbasis Raspberry Pi Pico. Studi literatur ini dilakukan dengan mempelajari dan menganalisis dari rancang bangun 
+  anemometer yang telah dibuat sebelumnya. Baik berupa penggunaan sensor, aktuator, maupun metode penelitian sebagai bahan penunjang 
+  tambahan dari gagasan yang akan direalisasikan. Dalam pencarian studi literatur ini dilakukan referensi dari buku, jurnal penelitian, 
+  ataupun artikel ilmiah yang berkaitan dengan gagasan yang dibawa. Data yang sudah terkumpul dari studi literatur sebelumnya dikumpulkan
+  dan diolah untuk penunjang gagasan yang direalisasikan.
 
-Adapun diagram blok sistem pengukuran kecepatan angin pada alat ini adalah sebagai berikut:
+  \item Persiapan Rancang Bangun Anemometer Ultrasonic
+
+  \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\linewidth]{"gambar/Blok diagram anemometer ultrasonic"}
+    \caption{Blok Diagram Sistem}
+    \label{fig:blok-diagram-anemometer-ultrasonic}
+  \end{figure}
+
+  Model sistem yang digunakan dapat dilihat pada  gambar \ref{fig:blok-diagram-anemometer-ultrasonic}. Prototipe anemometer ultrasonic dalam ruangan berbasis 
+  Raspberry Pi Pico ini akan dilengkapi dengan Website yang dapat menampilkan hasil data yang diperoleh alat secara real-time. Pengujian prototipe ini akan dilakukan 
+  dengan menghitung kecepatan angin pada saat kondisi normal dengan jarak konstan, kemudian hasilnya akan dibandingkan dengan anemometer yang asli. 
+
+  \item Perancangan Perangkat komersial
+  
+  Pada penelitian kali ini akan dilakukan pembuatan desain alat menggunakan aplikasi Fusion 360, dimana hasilnya akan dicetak menggunakan printer 3D. Selain desain alat, terdapat komponen
+  penting lainnya seperti sensor Ultrasonic, sensor suhu, penggaris, dan LCD untuk menampilkan informasi. Setelah seluruh komponen dijadikan prototipe, maka akan dilanjutkan ke tahap kalibrasi
+
+  \item Kalibrasi Sensor Ultrasonic
 
 \begin{figure}[h!]
 	\centering
@@ -33,15 +51,53 @@ Adapun diagram blok sistem pengukuran kecepatan angin pada alat ini adalah sebag
 	\label{fig:diagram-blok-pengukuran-kecepatan-angin}
 \end{figure}
 
+  Untuk menemukan konversi dari pembacaan sensor yang tepat. Dilakukan beberapa percobaan dengan berbagai kondisi dan variabel untuk menentukan rumus yang tepat untuk digunakan sebagai rumus umum.
+  Adapun diagram blok sistem pengukuran kecepatan angin pada alat ini dapat dilihat pada Gambar \ref{fig:diagram-blok-pengukuran-kecepatan-angin}.
+
+  \item Perancangan Perangkat Lunak
+  
+  Pada penelitian kali ini dibutuhkan perancangan perangkat lunak untuk menghubungkan antara hasil pembacaan sensor ultrasonic dengan website melalui jaringan internet.
+
+  \item Pembuatan Website untuk menampilkan data alat
+  
+  Secara garis besar, website akan menampilkan kecepatan angin dari prototipe alat secara real-time.
+  
+  \item Koneksi Anemometer ultrasonic dengan Website
+  
+  Pada tahapan ini, akan dilakukan penghubungan antara perangkat keras dengan perangkat lunak sehingga prototipe alat dapat terhubung dengan internet dan data yang diperoleh dapat dilihat melalui 
+  website. Jika semua sudah terkoneksi dengan benar maka akan dilanjutkan pada tahap pengujian.
+
+  \item Pengujian alat dan pengambilan data
+  
+  Pada tahap pengujian akan dilakukan pengujian pengukuran kecepatan angin. Pengujian alat ini menggunakan metode perubahan variabel kecepatan angin kemudian dilakukan perbandingan 
+  antara hasil pengukuran dari alat prototipe dengan hasil pengukuran dari anemometer Hot-wire yang
+  memiliki pengukuran kecepatan angin paling kecil mencapai 0,1 m/s.
+  \item Penarikan kesimpulan
+  
+  Berdasarkan data yang diperoleh dari tahap pengujian, dilakukan analisa dan didapatkan kesimpulan yang menjawab dari perumusan masalah yang terdapat pada bab I. 
+\end{enumerate}
 
 \subsection{Bahan dan peralatan yang digunakan}
 
-Untuk Alat dan bahan yang diperlukan dalam Tuagas Akhir ini adalah sebagai berikut:
+Untuk Alat dan bahan penunjang penelitian Tugas Akhir ini adalah sebagai berikut:
 \begin{enumerate}
   \item Raspberry Pi Pico W
-  \item Sensor Ultrasonic US-100
+  
+  Raspberry Pi Pico W adalah sebuah board minimum sistem mikrokontroller yang berbasis chip RP2040 didalamnya. 
+  Alat ini digunakan untuk membaca data dari sensor ultrasonic dan memproses data hasil bacaan sensor. Selain itu, 
+  mikrokontroller ini sudah memiliki modul wifi didalamnya sehingga dapat mengirimkan data langsung ke server database 
+  melalui jaringan wifi internet.
+
+  \item Modul US-100
+  
+  Merupakan sensor ultrasonic yang umumnya digunakan sebagai pengukur jarak, namun pada penelitian ini digunakan sebagia
+  pengukur kecepatan angin. Modul sensor ini terdiri dari sepasang transducer ultrasonic, salah satu bagian berfungsi sebagai 
+  transmitter yang mengubah sinyal elektrik menjadi sinyal pulsa gelombang suara ultrasonic dengan frekuensi 40KHz., dan bagian lainnya 
+  berfungsi sebagai receiver yang berfungsi menerima sinyal gelombang ultrasonic.
   \item Sensor Suhu
-  \item Anemometer Hot-Wire sebagai alat validasi pengukuran
+  
+  Sensor suhu digunakan untuk mengetahui kondisi temperatur sekitar dari alat prototipe yang dibangun. Hal ini berguna sebagai variabel 
+  pendukung dikarenakan salah satu parameter dalam kecepatan angin adalah suhu udara sekitar.
 \end{enumerate}
 
 \subsection{Urutan pelaksanaan penelitian}
@@ -59,20 +115,40 @@ Untuk Alat dan bahan yang diperlukan dalam Tuagas Akhir ini adalah sebagai berik
     \hline
 
     % Gunakan \G untuk mengisi sel dan \w untuk mengosongkan sel
-    Perancangan Sistem &
-    \G & \G & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    Studi Literatur &
+    \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Pengolahan data &
-    \w & \w & \w & \w & \w & \w & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w \\
+    Persiapan Alat dan Bahan &
+    \w & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Analisa data &
-    \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \w & \w & \w & \w \\
+    Perancangan Perangkat Keras &
+    \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Evaluasi penelitian &
-    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \G \\
+    Kalibrasi Sensor &
+    \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    \hline
+
+    Perancangan Perangkat Lunak &
+    \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w & \w \\
+    \hline
+
+    Pembuatan Website &
+    \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w \\
+    \hline
+
+    Koneksi Antara Anemometer Ultrasonic dengan Website &
+    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \w & \w & \w & \w \\
+    \hline
+
+    Pengujian Alat &
+    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w \\
+    \hline
+
+    Penarikan Kesimpulan &
+    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G \\
     \hline
 
   \end{tabular}

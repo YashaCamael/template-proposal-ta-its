@@ -4,15 +4,20 @@
 
 % Ubah paragraf-paragraf berikut sesuai dengan latar belakang dari tugas akhir
 Ruangan adalah suatu tempat tertutup dengan langit-langit yang berada di rumah atau bentuk bangunan lainnya. Ruangan biasanya memiliki pintu dan jendela yang berfungsi sebagai tempat masuknya cahaya, 
-aliran udara, dan akses menuju ruangan tersebut. Aliran udara berperan dalam memberikan penghawaan serta mengeluarkan udara dari dalam ke luar ruangan. Namun, aliran udara didalam ruangan tidaklah konstan karena dipengaruhi 
+aliran udara, dan akses menuju ruangan tersebut. Menurut Kepmenkes No.1204/ Menkes/ SK/ X/ 2004 tentang Persyaratan kesehatan lingkungan rumah sakit, penghawaan ruang bangunan adalah aliran udara segar didalam ruang bangunan yang memadai untuk menjamin Kesehatan penghuni 
+ruangan \parencites{menkes2004}. 
+Aliran udara berperan dalam memberikan penghawaan serta mengeluarkan udara dari dalam ke luar ruangan. Namun, aliran udara didalam ruangan tidaklah konstan karena dipengaruhi 
 oleh luasnya akses udara, keberadaan suhu dan kelembapan di dalam ruangan.
 
-Untuk mengukur kecepatan aliran udara dapat menggunakan alat bernama Anemometer. Anemometer memiliki berbagai macam jenis, secara umum anemometer terbagi menjadi dua macam yaitu velocity anemometer atau anemometer yang 
-berfungsi mengukur kecepatan angin dan anemometer tekanan atau pressure anemometer yang berfungsi mengukur tekanan angin. Salah satu yang merupakan jenis velocity anemometer yaitu sonic/ultrasonic anemometer, dengan menggunakan 
-media berupa gelombang suara.
+Aliran udara dalam ruang tersebut dapat berasal dari ventilasi alamiah (seperti jendela) ataupun ventilasi buatan/mekanik (seperti AC atau exhaust). Didalam buku Guideline for Good Indoor Air Quality in Office Premises menyebutkan 
+aliran udara yang baik pada ruangan adalah $\geq$ 0.25 cm/detik \parencite{inst1996guide}.
+Untuk mengukur kecepatan aliran udara dapat menggunakan alat bernama Anemometer. Anemometer memiliki berbagai macam jenis, secara umum anemometer terbagi menjadi dua macam yaitu velocity anemometer yang 
+berfungsi mengukur kecepatan angin dan pressure anemometer yang berfungsi mengukur tekanan angin. Salah satu jenis velocity anemometer anemometer ultrasonic yang memanfaatkan prinsip time of flight dari suara ultrasonik untuk memastikan kecepatan dan arah angin.
 
-Pada penelitian sebelumnya, telah dibuat suatu rancang bangun anemometer yang digunakan didalam ruangan. Pada rancangan Anemometer Ultrasonic sendiri memiliki kekurangan pada akurasi data karena masih memiliki error yang cukup 
-tinggi hingga 11.11 persen. Untuk meningkatkan akurasi data diperlukan frekuensi yang lebih tinggi pada mikrokontroler yang digunakan. Pada mikrokontroler sebelumnya hanya sebatas 16MHz, diharapkan dengan 
+Pada umumnya anemometer hanya dapat digunakan untuk kondisi luar ruangan untuk keperluan seperti di stasiun meteorologi ataupun menara bandara. 
+Untuk penggunaan anemometer didalam ruangan memerlukan penyesuaian agar anemometer mampu membaca aliran udara yang rendah. 
+Pada penelitian sebelumnya, telah dibuat suatu rancang bangun anemometer yang digunakan didalam ruangan. Walaupun rancang bangun anemometer ultrasonic berhasil berjalan dengan baik, akurasi data pengukuran kecepatan angin yang diambil memiliki error yang cukup 
+tinggi hingga 11.11 persen. Selain itu, ukuran dari rancang bangun tersebut Untuk meningkatkan akurasi data diperlukan frekuensi yang lebih tinggi pada mikrokontroler yang digunakan. Pada mikrokontroler sebelumnya hanya memiliki frekuensi sebatas 16MHz, diharapkan dengan 
 mengganti mikrokontroler menjadi Raspberry Pi Pico yang memiliki kemampuan frekuensi hingga 133MHz dapat meningkatkan akurasi data dari anemometer ultrasonic didalam ruangan.
 
 
@@ -21,7 +26,7 @@ mengganti mikrokontroler menjadi Raspberry Pi Pico yang memiliki kemampuan freku
 % Ubah paragraf berikut sesuai dengan rumusan masalah dari tugas akhir
 Berdasarkan hal yang telah dipaparkan di latar belakang. Rumusan masalah yang dibawa adalah sebagai berikut:
 \begin{enumerate}
-	\item[a.] Pada penelitian sebelumnya, terdapat kekurangan pada akurasi data yang didapatkan masih rendah.
+	\item[a.] Pada penelitian sebelumnya, akurasi data yang didapatkan masih rendah.
 	\item[b.] Ukuran dari rancang bangun Anemometer masih terbilang cukup besar untuk digunakan didalam ruangan.
 \end{enumerate}
 
@@ -58,6 +63,6 @@ Adapun manfaat yang diperoleh dari Tugas Akhir ini sebagai berikut:
 	
 	\item [c.]	Bagi masyarakat
 	
-	Memperluas wawasan dalam perancangan anemometer ultrasonic dalam pengukuran aliran udara.
+	Memperluas wawasan dalam perancangan anemometer ultrasonic untuk pengukuran aliran udara rendah.
 	
 \end{enumerate}

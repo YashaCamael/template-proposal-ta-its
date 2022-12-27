@@ -11,7 +11,7 @@ masih memiliki error yang cukup besar yaitu maksimal 11,11 persen dan minimal se
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{gambar/fig_anemometer_abdillah_prototipe}
+	\includegraphics[width=0.5\linewidth]{gambar/fig_anemometer_abdillah_prototipe}
 	\caption{Rancang Bangun Anemometer Ultrasonic \parencite{Abdillah2022}}
 	\label{abdillah_anemo_prototipe}
 \end{figure}
@@ -25,7 +25,7 @@ tertinggi sebesar 5,10 m/s dengan arah angin dinotasikan dalam derajat (theta).
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{gambar/fig_alat_cahyolaksono}
+	\includegraphics[width=0.5\linewidth]{gambar/fig_alat_cahyolaksono}
 	\caption{Rancang Bangun Thermal-Based Anemometer \parencite{Cahyolaksono2022}}
 	\label{fig:figalatcahyolaksono}
 \end{figure}
@@ -132,7 +132,7 @@ yang ditempatkan tegak lurus terhadap angin. Angin akan menggerakkan bendera dan
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics{gambar/anemometerGen1}
+	\includegraphics[width=0.3\linewidth]{gambar/anemometerGen1}
 	\caption{Anemometer Generasi Pertama \parencite{Panjaitan2018}}
 	\label{fig:anemometergen1}
 \end{figure}
@@ -160,7 +160,7 @@ diketahui kecepatananginnya. Didalam anemometer terdapat alat pencacah yang akan
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\linewidth]{gambar/anemometerWindmill}
+	\includegraphics[width=0.3\linewidth]{gambar/anemometerWindmill}
 	\caption{Windmill Anemometer}
 	\label{fig:anemometerwindmill}
 \end{figure}
@@ -208,7 +208,7 @@ longitudinal, gerak partikel pada suatu media akustik searah dengan perambatanny
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=\linewidth]{"gambar/spektrum akustik"}
+	\includegraphics[width=0.8\linewidth]{"gambar/spektrum akustik"}
 	\caption{Spektrum Akustik \parencite{figGelombangAkustik}}
 	\label{fig:spektrum-akustik}
 \end{figure}
@@ -335,6 +335,13 @@ kecepatan rambat suara akan menurun \parencite{del2007low}.
 
 \subsection{Raspberry Pi Pico W}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{"gambar/pico pinout"}
+	\caption{Raspberry Pi Pico Pinout \parencite{figPicoPinout}}
+	\label{fig:pico-pinout}
+\end{figure}
+
 Raspberry Pi Pico merupakan microcontroller pertama yang diproduksi oleh Raspberry Pi Foundation pada tahun 2021. Terdapat 2 model
 yaitu yang seri biasa dan seri W yang sudah terintegrasi dengan modul Wifi. Baik seri biasa dan seri W menggunakan RP2040 sebagai basisnya.
 Raspberry Pi Pico adalah mikrokontroler pertama berkinerja tinggi, rendah biaya
@@ -347,10 +354,37 @@ cache on-chip. 16 pin PWM, Real Time Counter,
 dan USB1.1 on-board menambah fitur Raspberry Pi
 Pico. Pi Pico berjalan di MicroPython, implementasi dari
 Pemrograman Phyton 3 \parencite{thothadri2021analysis}.
-
-\begin{figure}[h!]
+\begin{table}[h!]
+	\caption{Spesifikasi Raspberry Pi Pico}
 	\centering
-	\includegraphics[width=0.7\linewidth]{"gambar/pico pinout"}
-	\caption{Raspberry Pi Pico Pinout \parencite{figPicoPinout}}
-	\label{fig:pico-pinout}
-\end{figure}
+	\begin{tabular}{|c|p{6cm}|}
+		\hline
+		SoC & RP2040  \\
+		\hline
+		CPU type & Cortex M0+  \\
+		\hline
+		Core Count & 2  \\
+		\hline
+		Max Speed & 48 Mhz, upto 133 Mhz  \\
+		\hline
+		SRAM & 264kB in 6 banks  \\
+		\hline
+		Storage & 2 MB QSPI flash (up to 16 MB supported)  \\
+		\hline
+		Connectivity & 802.11b/g/n WiFi 4 with ABRACON onboard antenna (Infineon CYW43439 connected over SPI)  \\
+		\hline
+		USB & 1x Micro USB 1.1 port used for power and programming  \\
+		\hline
+		Expansion & - 2x 20-pin 2.54mm pitch header and castellated holes with 26x GPIOs, 3x 12-bit ADC up to 500 Kbps, 2x UART, 2x I2C, 2x SPI, 16x PWM, 2 × programmable I/O (PIO) blocks with 8 state machines  \\
+		& - 3.3V I/O voltage  \\
+		\hline
+		Debugging & 3-pin Arm Serial Wire Debug (SWD) port  \\
+		\hline
+		& - BOOTSEL button  \\
+		Misc & - user LED (WL\_GPIO0)  \\
+		& - RTC  \\
+		\hline
+		Power Supply & 5V via Micro USB port or 1.8 to 5.5V DC via VSYS pin  \\
+		\hline
+	\end{tabular}
+\end{table}
